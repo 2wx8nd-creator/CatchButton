@@ -2,15 +2,10 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
+
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+  
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,18 +17,36 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            runawayButton = new Button();
+            SuspendLayout();
+            // 
+            // runawayButton
+            // 
+            runawayButton.Location = new Point(283, 83);
+            runawayButton.Name = "runawayButton";
+            runawayButton.Size = new Size(252, 164);
+            runawayButton.TabIndex = 0;
+            runawayButton.Text = "클릭해보셈ㅋㅋ";
+            runawayButton.UseVisualStyleBackColor = true;
+            runawayButton.Click += runawayButton_Click;
+            runawayButton.MouseEnter += runawayButton_MouseEnter;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(runawayButton);
+            Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button runawayButton;
     }
 }
