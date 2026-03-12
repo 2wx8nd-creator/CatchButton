@@ -16,14 +16,15 @@
         }
 
         #region Windows Form Designer generated code
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
         private void InitializeComponent()
         {
             runawayButton = new Button();
             SuspendLayout();
-            // 
-            // runawayButton
-            // 
+
             runawayButton.Location = new Point(283, 83);
             runawayButton.Name = "runawayButton";
             runawayButton.Size = new Size(252, 164);
@@ -32,9 +33,7 @@
             runawayButton.UseVisualStyleBackColor = true;
             runawayButton.Click += runawayButton_Click;
             runawayButton.MouseEnter += runawayButton_MouseEnter;
-            // 
-            // Form1
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
