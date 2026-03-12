@@ -1,7 +1,8 @@
 using System;
 using System.Drawing;
-using System.Windows.Forms;
 using System.Media;
+using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CatchButton
 {
@@ -35,13 +36,15 @@ namespace CatchButton
             }
 
             SystemSounds.Beep.Play();
-            
+
             await Task.Delay(difficultyDelay);
 
             int maxX = this.ClientSize.Width - runawayButton.Width;
             int maxY = this.ClientSize.Height - runawayButton.Height;
-
-            runawayButton.Location = new Point(random.Next(0, maxX), random.Next(0, maxY));
+            int nextX = random.Next(0, maxX);
+            int nextY = random.Next(0, maxY);
+            runawayButton.Location = new Point(nextX, nextY);
+            this.Text = $"버튼 위치: ({nextX}, {nextY}) | 남은 기회: {10 - missCount}";
         }
 
         private void runawayButton_Click(object sender, EventArgs e)
