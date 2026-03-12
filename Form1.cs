@@ -1,7 +1,17 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Media;
+
+
 namespace CatchButton
 {
     public partial class Form1 : Form
     {
+
+        private SoundPlayer missSound = new SoundPlayer("miss.wav");
+        private SoundPlayer successSound = new SoundPlayer("success.wav");
+
         private Random random = new Random();
 
         public Form1()
@@ -11,7 +21,7 @@ namespace CatchButton
 
         private async　void runawayButton_MouseEnter(object sender, EventArgs e)
         {
-
+            SystemSounds.Beep.Play(); ;
             await Task.Delay(100);
 
             int maxX = this.ClientSize.Width - runawayButton.Width;
@@ -32,6 +42,9 @@ namespace CatchButton
 
         private void runawayButton_Click(object sender, EventArgs e)
         {
+
+            SystemSounds.Asterisk.Play();
+
             runawayButton.Visible = false;
             this.BackColor = Color.LightYellow;
 
